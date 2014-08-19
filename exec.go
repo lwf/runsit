@@ -126,7 +126,7 @@ func MaybeBecomeChildProcess() {
 			log.Fatalf("failed to Setuid(%d): %v", lr.Uid, err)
 		}
 	}
-	if lr.Path != "" {
+	if lr.Dir != "" {
 		err = os.Chdir(lr.Dir)
 		if err != nil {
 			log.Fatalf("failed to chdir to %q: %v", lr.Dir, err)
